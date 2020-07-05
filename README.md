@@ -14,9 +14,9 @@
 Для начала создаём файл с конфигурацией для сервиса в директории /etc/sysconfig - из неё сервис будет брать необходимые переменные.
 
   [ingorbunovi@centos ~]$ cat /etc/sysconfig/watchlog
-  # Configuration file for my watchdog service
-  # Place it to /etc/sysconfig
-  # File and word in that file that we will be monitored
+  #Configuration file for my watchdog service
+  #Place it to /etc/sysconfig
+  #File and word in that file that we will be monitored
   WORD="ALERT"
   LOG=/var/log/watchlog.log
 
@@ -57,9 +57,9 @@
   [Unit]
   Description=Run watchlog script every 30 second
   [Timer]
-  # Run 30 sec after boot
+  #Run 30 sec after boot
   OnBootSec=30
-  # Run every 30 second
+  #Run every 30 second
   OnUnitInactiveSec=30
   Unit=watchlog.service
   [Install]
@@ -74,12 +74,12 @@
 Но перед этим необходимо раскомментировать строки с переменными в /etc/sysconfig/spawn-fcgi
 
   root@centos ingorbunovi]# cat /etc/sysconfig/spawn-fcgi 
-  # You must set some working options before the "spawn-fcgi" service will work.
-  # If SOCKET points to a file, then this file is cleaned up by the init script.
+  #You must set some working options before the "spawn-fcgi" service will work.
+  #If SOCKET points to a file, then this file is cleaned up by the init script.
   #
-  # See spawn-fcgi(1) for all possible options.
+  #See spawn-fcgi(1) for all possible options.
   #
-  # Example :
+  #Example :
   SOCKET=/var/run/php-fcgi.sock
   OPTIONS="-u apache -g apache -s $SOCKET -S -M 0600 -C 32 -F 1 -P /var/run/spawn-fcgi.pid -- /usr/bin/php-cgi"
 
