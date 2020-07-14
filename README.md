@@ -83,7 +83,7 @@
     master!
     Feb 26 16:49:27 terraform-instance systemd: Started My watchlog service.
     
-### Из epel установитþ spawn-fcgi и переписать init-скрипт на unit-файл. Имя сервиса должно также называться.
+### Из epel установить spawn-fcgi и переписать init-скрипт на unit-файл. Имя сервиса должно также называться.
 
 Устанавливаем spawn-fcgi и необходимые для него пакеты:
 
