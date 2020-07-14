@@ -9,7 +9,7 @@ cp /vagrant/files/watchlog.timer /etc/systemd/system/watchlog.timer
 
 systemctl enable watchlog.timer --now
 
-# TASK 1
+# TASK 2
 "------ Start Task 2 ------"
 yum install epel-release -y && yum install spawn-fcgi php php-cli mod_fcgid httpd -y
 
