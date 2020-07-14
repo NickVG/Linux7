@@ -4,6 +4,7 @@
 echo "------ Start Task 1 ------"
 cp /vagrant/files/watchlog /etc/sysconfig/watchlog
 cp /vagrant/files/watchlog.sh /opt/watchlog.sh
+chmod +x /opt/watchlog.sh
 cp /vagrant/files/watchlog.service /etc/systemd/system/watchlog.service
 cp /vagrant/files/watchlog.timer /etc/systemd/system/watchlog.timer
 
